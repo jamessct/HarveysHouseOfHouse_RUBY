@@ -28,4 +28,10 @@ class Stock
     result = stock.map { |stock| Stock.new(stock)}
     return result
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM stock WHERE id = #{id};"
+    stock = SqlRunner.run(sql).first
+    return Stock.new(stock)
+  end
 end
