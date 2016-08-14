@@ -13,9 +13,16 @@ class Artist
   end
 
   def save()
-    sql = "INSERT INTO artists (name) VALUES ('#{@name}', '#{@genre}') RETURNING *;"
-    artist = SqlRunner.run(sql).first
+    sql = "INSERT INTO artist (name) VALUES ('#{@name}', '#{@genre}') RETURNING *;"
+    artists = SqlRunner.run(sql).first
     @id = artist['id']
+  end
+
+  def self.all()
+    sql = "SELECT * FROM artist;"
+    artists = SqlRunner.run(sql)
+    result = artists.map { |artist| Artist.new(artist)}
+    return result
   end
 
 end

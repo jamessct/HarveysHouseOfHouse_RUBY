@@ -1,6 +1,6 @@
 require('pg')
-require_relative('..db/sql_runner')
-require_relative('..models/album')
+require_relative('../db/sql_runner')
+require_relative('../models/album')
 
 class Stock
 
@@ -20,5 +20,12 @@ class Stock
     sql = "INSERT INTO stock (album_id, format, stock_level, threshold, buy_price, sell_price) VALUES (#{@album_id},  '#{@format}', #{@stock_level}, #{@threshold}, #{@buy_price}, #{@sell_price} RETURNING *;"
     stock = SqlRunner.run(sql).first
     @id = stock['id']
+  end
+
+  def self.all()
+    sql = "SELECT * FROM stock;"
+    stock = SqlRunner.run(sql)
+    result = stock.map { |stock| Stock.new(stock)}
+    return result
   end
 end
