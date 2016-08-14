@@ -17,8 +17,9 @@ CREATE TABLE albums (
 CREATE TABLE stock (
   id serial4 primary key,
   album_id int4 references albums(id) on delete cascade,
-  media_format varchar(255),
+  format varchar(255),
   stock_level int4,
   threshold int4,
   buy_price money,
   sell_price money
+);
