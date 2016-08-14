@@ -18,6 +18,21 @@ class Album
     @id = album['id']
   end
 
+  def artist()
+    sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
+    artist = SqlRunner.run(sql)
+    result = Artist.new(artist).first
+    return result
+  end
+
+  def stock()
+    sql = "SELECT * FROM stock WHERE album_id = #{@id};"
+    stock = SqlRunner.run(sql)
+    result = Stock.new(stock).first
+    return result
+  end
+
+
   def self.all()
     sql = "SELECT * FROM album;"
     albums = SqlRunner.run(sql)
