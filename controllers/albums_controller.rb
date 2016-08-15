@@ -17,7 +17,7 @@ get('/albums') do
 end
 
 get('/albums/:id') do
-  @albums = Album.find(params[:id])
+  @album = Album.find(params[:id])
   erb(:'albums/show')
 end
 
@@ -27,12 +27,12 @@ get('/albums/:id/edit') do
   erb(:'albums/edit')
 end
 
-put '/albums/:id' do
+put('/albums/:id') do
  @album = Album.update(params)
  redirect to("/albums/#{params[:id]}")
 end
 
-post '/albums/:id/delete' do
+post('/albums/:id/delete') do
   @album = Album.destroy(params[:id])
-  redirect to("/albums")
+  redirect to('/albums')
 end

@@ -47,7 +47,7 @@ class Stock
   end
 
   def self.destroy(id)
-    sql = "DELETE FROM artists WHERE id = #{id};"
+    sql = "DELETE FROM stock WHERE id = #{id};"
     SqlRunner.run(sql)
   end
 end

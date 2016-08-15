@@ -28,6 +28,11 @@ get('/stock/:id/edit') do
 end
 
 put('/stock/:id') do
-  @stock = Stock.update(params[:id])
-  redirect to('stock/#{params[:id]}')
+  @stock = Stock.update(params)
+  redirect to('/stock/#{params[:id]}')
+end
+
+post('/stock/:id/delete') do
+  @stock = Stock.delete(params[:id])
+  redirect to('/stock')
 end

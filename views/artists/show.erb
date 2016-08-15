@@ -1,7 +1,10 @@
 <h1>Artist:</h1>
-<p><%= @artists.name() %></p>
+<p><%= @artist.name() %></p>
 
 <h1>Genre</h1>
-<p><%= @artists.genre() %></p>
+<p><%= @artist.genre() %></p>
 
-<a href="/artists/<%= @artists.id %>/edit">Edit</a>
+<a href="/artists/<%= @artist.id %>/edit">Edit</a>
+
+<form action="/artists/<%= @artist.id %>/delete" method="post"></form>
+<input type="submit" value="delete">

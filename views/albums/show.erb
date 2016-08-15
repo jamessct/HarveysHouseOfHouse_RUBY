@@ -1,7 +1,7 @@
 <h1>NAME:</h1>
-<p><%= @albums.name() %></p>
+<p><%= @album.name() %></p>
 
-<a href="/albums/<%= @albums.id %>/edit">Edit</a>
+<a href="/albums/<%= @album.id %>/edit">Edit</a>
 
-<form action="/albums/<%= @albums.id %>/delete" method="post"></form>
+<form action="/albums/<%= @album.id %>/delete" method="post"></form>
 <input type="submit" value="delete">
