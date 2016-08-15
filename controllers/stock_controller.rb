@@ -29,6 +29,7 @@ end
 
 get('/stock/:id/edit') do
   @stock = Stock.find(params[:id])
+  @albums = Album.all
   erb(:'stock/edit')
 end
 
