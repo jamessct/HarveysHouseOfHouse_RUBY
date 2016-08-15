@@ -1,16 +1,14 @@
 require_relative('../models/stock')
-require_relative('../models/artist')
+
+# get('/stock/new') do
+#   @artist = Artist.all
+#   erb(:'stock/select_artist')
+#   redirect to('/stock/#{params[:id]/new')
+# end
 
 get('/stock/new') do
-  @artist = Artist.all
-  erb(:'stock/select_artist')
-  redirect to('/stock/#{params[:id]/new')
-end
-
-get('/stock/:id/new') do
-
   @albums = Album.all
-  erb(:'stock/new_stock')
+  erb(:'stock/new')
 end
 
 post('/stock') do

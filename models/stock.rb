@@ -25,7 +25,7 @@ class Stock
   def self.all()
     sql = "SELECT * FROM stock;"
     stock = SqlRunner.run(sql)
-    result = stock.map { |stock| Stock.new(stock)}
+    result = stock.map {|stock| Stock.new(stock)}
     return result
   end
 

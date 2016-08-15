@@ -3,7 +3,12 @@
   <h2>Edit Stock</h2>
 
   <form action="/stock/<%= @stock.id %>" method="post">
-    <input type="hidden" name="_method" value="put">
+    <select name=album_id>
+      <% @albums.each do |album| %>
+      <option value=<%= album.id %>><%= album.name %></option>
+      <% end %>
+    </select>
+
     <select name="format" >
       <option value="CD" <%= 'selected' if @stock.format == "CD"%>>CD</option>
       <option value="Vinyl" <%= 'selected' if @stock.format == "Vinyl" %>>Vinyl</option>
@@ -17,7 +22,6 @@
     <input type="numbers" name="buy_price" min="0" value="<%= @stock.buy_price %>"><br>
     <label for="sell_price">Sell Price:</label>
     <input type="numbers" name="sell_price" min="0" value="<%= @stock.sell_price %>"><br>
-
     
     <input type='submit' value="Update Stock">
   </form>
