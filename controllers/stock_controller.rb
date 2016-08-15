@@ -13,6 +13,7 @@ end
 
 get('/stock') do
   @stock = Stock.all
+  @albums = album.all
   erb(:'stock/index')
 end
 

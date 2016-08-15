@@ -14,16 +14,16 @@
   </select>
 
   <label for="stock_level">Quantity</label>
-  <input type="number" name="stock_level">
+  <input type="number" min="0" value="0" name="stock_level">
 
   <label for="threshold">Threshold</label>
-  <input type="number" name="threshold">
+  <input type="number" min="0" value="0" name="threshold">
 
   <label for="buy_price">Buy Price</label>
-  <input type="number" name="buy_price">
+  <input type="number" min="0" value="0.00" name="buy_price">
 
   <label for="sell_price">Sell Price</label>
-  <input type="number" name="sell_price">
+  <input type="number" min="0" value="0.00" name="sell_price">
 
-  <input type="submit" name="Add Stock">
+  <input type="submit" value="Add Stock">
 </form>

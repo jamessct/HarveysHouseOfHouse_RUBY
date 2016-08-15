@@ -9,7 +9,7 @@ class Album
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
-    @artist_id = options['artist_id']
+    @artist_id = options['artist_id'].to_i
   end
 
   def save()
