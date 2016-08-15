@@ -1,0 +1,6 @@
+<label for="artist">Artist</label>
+<select name="artist_id">
+  <% @artist.each do |artist| %>
+    <option value="<%= artist.id %>"><%= artist.name %></option>
+  <% end %>
+</select>
