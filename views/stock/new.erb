@@ -1,0 +1,29 @@
+<h1>New stock</h1>
+
+<form action="/stock" method="post">
+  <select name=album_id>
+    <% @albums.each do |album| %>
+    <option value=<%= album.id %>><%= album.name %></option>
+    <% end %>
+  </select>
+
+  <select name=format>
+    <option value=CD>CD</option>
+    <option value=vinyl>Vinyl</option>
+    <option value=cassette>Cassette</option>
+  </select>
+
+  <label for="stock_level">Quantity</label>
+  <input type="number" name="stock_level">
+
+  <label for="threshold">Threshold</label>
+  <input type="number" name="threshold">
+
+  <label for="buy_price">Buy Price</label>
+  <input type="number" name="buy_price">
+
+  <label for="sell_price">Sell Price</label>
+  <input type="number" name="sell_price">
+
+  <input type="submit" name="Add Stock">
+</form>

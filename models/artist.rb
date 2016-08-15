@@ -1,6 +1,6 @@
 require('pg')
 require_relative('../db/sql_runner')
-require_relative('../models/album')
+require_relative('album')
 
 class Artist
 
@@ -13,8 +13,8 @@ class Artist
   end
 
   def save()
-    sql = "INSERT INTO artists (name) VALUES ('#{@name}', '#{@genre}') RETURNING *;"
-    artists = SqlRunner.run(sql).first
+    sql = "INSERT INTO artists (name, genre) VALUES ('#{@name}', '#{@genre}') RETURNING *;"
+    artist = SqlRunner.run(sql).first
     @id = artist['id']
   end
 

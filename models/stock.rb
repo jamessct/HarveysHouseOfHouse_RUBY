@@ -1,6 +1,6 @@
 require('pg')
 require_relative('../db/sql_runner')
-require_relative('../models/album')
+require_relative('album')
 
 class Stock
 

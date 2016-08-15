@@ -1,6 +1,6 @@
 require('pg')
 require_relative('../db/sql_runner')
-require_relative('../models/stock')
+require_relative('stock')
 
 class Album
 
@@ -31,7 +31,6 @@ class Album
     result = Stock.new(stock).first
     return result
   end
-
 
   def self.all()
     sql = "SELECT * FROM album;"

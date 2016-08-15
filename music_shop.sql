@@ -1,4 +1,4 @@
-DROP TABLE stock;
+DROP TABLE stocks;
 DROP TABLE albums;
 DROP TABLE artists;
 
@@ -20,6 +20,6 @@ CREATE TABLE stock (
   format varchar(255),
   stock_level int4,
   threshold int4,
-  buy_price int4,
-  sell_price int4
-);
+  buy_price money,
+  sell_price money
+)
