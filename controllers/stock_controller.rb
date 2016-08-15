@@ -26,3 +26,8 @@ get('/stock/:id/edit') do
   @stock = Stock.find(params[:id])
   erb(:'stock/edit')
 end
+
+put('/stock/:id') do
+  @stock = Stock.update(params[:id])
+  redirect to('stock/#{params[:id]}')
+end

@@ -44,4 +44,11 @@ class Album
     album = SqlRunner.run(sql).first
     return Album.new(album)
   end
+
+  def self.update(options)
+    sql = "UPDATE albums SET
+            name = '#{options['name']}',
+            artist_id = #{options['artist_id']}"
+    SqlRunner.run(sql)
+  end
 end

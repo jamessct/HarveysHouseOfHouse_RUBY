@@ -34,4 +34,15 @@ class Stock
     stock = SqlRunner.run(sql).first
     return Stock.new(stock)
   end
+
+  def self.update(options)
+    sql = "UPDATE stock SET
+            format = '#{options['format']}',
+            stock_level = #{options['stock_level']},
+            threshold = #{options['threshold']},
+            buy_price = #{options['buy_price']},
+            sell_price = #{options['sell_price']}
+            WHERE id = #{options['id']};"
+    SqlRunner.run(sql)
+  end
 end
