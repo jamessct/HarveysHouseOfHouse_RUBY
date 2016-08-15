@@ -21,9 +21,13 @@ get('/albums/:id') do
   erb(:'albums/show')
 end
 
-get '/albums/:id/edit' do
+get('/albums/:id/edit') do
   @album = Album.find(params[:id])
   @artist = Artist.all()
   erb( :'albums/edit' )
 end
 
+put '/albums/:id' do
+ @album = Album.update( params )
+ redirect to( "/albums/#{params[:id]}" )
+end
