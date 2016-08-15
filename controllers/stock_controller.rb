@@ -5,7 +5,7 @@ get('/stock/new') do
   erb(:'stock/new')
 end
 
-post('/artists') do
+post('/stock') do
   @stock = Stock.new(params)
   @stock.save
   erb(:'stock/create')
