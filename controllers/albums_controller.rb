@@ -24,10 +24,15 @@ end
 get('/albums/:id/edit') do
   @album = Album.find(params[:id])
   @artist = Artist.all()
-  erb( :'albums/edit' )
+  erb(:'albums/edit')
 end
 
 put '/albums/:id' do
- @album = Album.update( params )
- redirect to( "/albums/#{params[:id]}" )
+ @album = Album.update(params)
+ redirect to("/albums/#{params[:id]}")
+end
+
+post '/albums/:id/delete' do
+  @album = Album.destroy(params[:id])
+  redirect to("/albums")
 end

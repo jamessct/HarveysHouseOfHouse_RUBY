@@ -2,3 +2,6 @@
 <p><%= @albums.name() %></p>
 
 <a href="/albums/<%= @albums.id %>/edit">Edit</a>
+
+<form action="/albums/<%= @albums.id %>/delete" method="post"></form>
+<input type="submit" value="delete">
