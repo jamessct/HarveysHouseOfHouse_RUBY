@@ -1,0 +1,18 @@
+<div class="content">
+
+  <h2>Edit Artist</h2>
+
+  <form action="/artists/<%= @artist.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= @artist.name %>"><br>
+
+    <select name="genre" >
+      <option value="Noise" <%= 'selected' if @artist.genre == "Noise"%>>Noise</option>
+      <option value="Pop" <%= 'selected' if @artist.genre == "Pop" %>>Pop</option>
+      <option value="Noise" <%= 'selected' if @artist.genre == "Soundtrack" %>>Soundtrack</option>
+    </select>
+    <input type='submit' value="Update Artist">
+  </form>
+
+</div>
