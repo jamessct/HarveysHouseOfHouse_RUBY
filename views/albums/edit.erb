@@ -3,7 +3,7 @@
   <h2>Edit Album</h2>
 
   <form action="/albums/<%= @album.id.to_s %>" method="post">
-    <input type="hidden" name="method" value="put">
+    <input type="hidden" name="_method" value="put">
     <label for="name">Name:</label>
     <input type="text" name="name" value="<%= @album.name %>"><br>
     

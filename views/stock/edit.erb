@@ -1,0 +1,25 @@
+<div class="content">
+
+  <h2>Edit Stock</h2>
+
+  <form action="/stock/<%= @stock.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <select name="format" >
+      <option value="CD" <%= 'selected' if @stock.format == "CD"%>>CD</option>
+      <option value="Vinyl" <%= 'selected' if @stock.format == "Vinyl" %>>Vinyl</option>
+      <option value="Cassette" <%= 'selected' if @stock.format == "Cassette" %>>Cassette</option>
+    </select><br>
+    <label for="stock_level">Stock level:</label>
+    <input type="numbers" name="stock_level" value="<%= @stock.stock_level %>"><br>
+    <label for="threshold">Threshold:</label>
+    <input type="numbers" name="threshold" min="0" value="<%= @stock.threshold %>"><br>
+    <label for="buy_price">Buy Price:</label>
+    <input type="numbers" name="buy_price" min="0" value="<%= @stock.buy_price %>"><br>
+    <label for="sell_price">Sell Price:</label>
+    <input type="numbers" name="sell_price" min="0" value="<%= @stock.sell_price %>"><br>
+
+    
+    <input type='submit' value="Update Stock">
+  </form>
+
+</div>

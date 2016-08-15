@@ -1,7 +1,8 @@
 <h2>Stock List</h2>
 
 <% @stock.each do |stock| %>
-<% @albums.each do |album| %>
-  <li>Album: <%= album.name %>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Threshold: <%= stock.threshold  %> | Buy: £<%= stock.buy_price %> | Sell: £<%= stock.sell_price %></li>
+<!--<% @albums.each do |album| %>-->
+  <li><!--Album: <%= album.name %> --> Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Threshold: <%= stock.threshold  %> | Buy: £<%= stock.buy_price %> | Sell: £<%= stock.sell_price %></li>
   <a href="/stock/<%= stock.id %>">View</a>
+<% end %>
 <% end %>

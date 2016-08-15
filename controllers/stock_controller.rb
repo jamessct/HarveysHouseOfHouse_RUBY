@@ -13,11 +13,16 @@ end
 
 get('/stock') do
   @stock = Stock.all
-  @albums = album.all
+  @albums = Album.all
   erb(:'stock/index')
 end
 
 get('/stock/:id') do
   @stock = Stock.find(params[:id])
   erb(:'stock/show')
+end
+
+get('/stock/:id/edit') do
+  @stock = Stock.find(params[:id])
+  erb(:'stock/edit')
 end
