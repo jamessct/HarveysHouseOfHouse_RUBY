@@ -5,13 +5,15 @@ DROP TABLE artists;
 CREATE TABLE artists (
   id serial4 primary key,
   name varchar(255),
-  genre varchar(255)
+  genre varchar(255),
+  UNIQUE (name)
 );
 
 CREATE TABLE albums (
   id serial4 primary key,
   name varchar(255),
-  artist_id int4 references artists(id) on delete cascade
+  artist_id int4 references artists(id) on delete cascade,
+  UNIQUE (name)
 );
 
 CREATE TABLE stock (

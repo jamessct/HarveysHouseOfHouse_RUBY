@@ -1,5 +1,5 @@
 require_relative('../models/stock')
-# require('pry-byebug')
+require('pry-byebug')
 
 get('/stock/select_artist') do
   @artist = Artist.all
@@ -8,8 +8,6 @@ end
 
 get('/artists/:id/stock/new') do
   @albums = Album.all
-  # binding.pry
-  # nil
   @album = Album.new(params)
   erb(:'stock/new')
 end
