@@ -23,6 +23,20 @@ class Stock
     @id = stock['id']
   end
 
+  def albums()
+    sql = "SELECT * FROM albums WHERE id = #{@id}"
+    albums = SqlRunner.run(sql)
+    result = albums.map {|album| Album.new(album)}
+    return result
+  end
+
+  def artists()
+    sql = "SELECT * FROM artists WHERE id = #{@album_id}"
+    artists = SqlRunner.run(sql)
+    result = artists.map {|artist| Artist.new(artist)}
+    return result
+  end
+
   def self.all()
     sql = "SELECT * FROM stock;"
     stock = SqlRunner.run(sql)

@@ -21,7 +21,8 @@ post('/stock') do
 end
 
 get('/stock') do
-  @stock = Stock.all
+  @stocks = Stock.all
+  @artists = Artist.all
   @albums = Album.all
   erb(:'stock/index')
 end
