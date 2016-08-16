@@ -3,7 +3,9 @@
 <form action="/stock" method="post">
   <select name=album_id>
     <% @albums.each do |album| %>
+    <% if @album.artist_id == album.artist_id %>
     <option value=<%= album.id %>><%= album.name %></option>
+    <% end %>
     <% end %>
   </select>
 
