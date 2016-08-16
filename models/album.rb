@@ -4,16 +4,17 @@ require_relative('stock')
 
 class Album
 
-  attr_reader(:id, :name, :artist_id)
+  attr_reader(:id, :name, :album_art, :artist_id)
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
+    @album_art = options['album_art']
     @artist_id = options['artist_id'].to_i
   end
 
   def save()
-    sql = "INSERT INTO albums (name, artist_id) VALUES ('#{@name}',  #{@artist_id}) RETURNING *;"
+    sql = "INSERT INTO albums (name, album_art, artist_id) VALUES ('#{@name}', '#{@album_art}', #{@artist_id}) RETURNING *;"
     album = SqlRunner.run(sql).first
     @id = album['id']
   end
@@ -48,6 +49,7 @@ class Album
   def self.update(options)
     sql = "UPDATE albums SET
             name = '#{options['name']}',
+            album_art = #{options['album_art']}
             artist_id = #{options['artist_id']}
             WHERE id = #{options['id']};"
     SqlRunner.run(sql)

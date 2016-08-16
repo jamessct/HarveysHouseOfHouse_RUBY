@@ -1,24 +1,11 @@
-<h1>You've added...</h1>
+<h2>You've added...</h2>
 
-<p>Artist</p>
-<p><%= @artists.name %></p>
+<p><b>Artist - </b><%= @artists.name %></p>
+<p><b>Album - </b><%= @albums.name %></p>
+<p><b>Format - </b><%= @stock.format %></p>
+<p><b>Quantity - </b><%= @stock.stock_level %></p>
+<p><b>Threshold - </b><%= @stock.threshold %></p>
+<p><b>Buy Price - </b>£<%= @stock.buy_price %>.00</p>
+<p><b>Sell Price - </b>£<%= @stock.sell_price %>.00</p>
 
-<p>Album</p>
-<p><%= @albums.name %></p>
-
-<p>Format:</p>
-<p><%= @stock.format %></p>
-
-<p>Quantity:</p>
-<p><%= @stock.stock_level %></p>
-
-<p>Threshold:</p>
-<p><%= @stock.threshold %></p>
-
-<p>Buy Price:</p>
-<p>£<%= @stock.buy_price %></p>
-
-<p>Sell Price:</p>
-<p>£<%= @stock.sell_price %></p>
-
-<h1>...to your stock!</h1>
+<h2>...to your stock!</h2>

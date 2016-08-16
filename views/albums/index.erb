@@ -3,6 +3,7 @@
 
 <% @albums.each do |album| %>
   <p>Album: <%= album.name %></p>
+  <img src=" <%= album.album_art %>" style="width:250px;height:250px;">
   <a href="/albums/<%= album.id %>">View</a>
 <% end %>
 
