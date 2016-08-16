@@ -1,5 +1,6 @@
 <h2>Stock List</h2>
 
+<p>
 <% @stocks.each do |stock|  %>
 Artist: <br>
 <% stock.albums.each do |album| %>
@@ -12,19 +13,32 @@ Genre:
 
 Album name:
 <% stock.albums.each do |album| %>
-<%= album.name %>
+<%= album.name %><br>
 <% end %>
 
 
+Format:
+<%= stock.format %><br>
 
+Quantity:
+<%= stock.stock_level %><br>
 
+Threshold:
+<%= stock.threshold %><br>
 
+Buy price:
+<%= stock.buy_price %><br>
 
-
-
+Sell price:
+<%= stock.sell_price %><br>
 
 </p>
+<a href="/stock/<%= stock.id %>">View</a>
+</form>
+</form>
 <hr>
 <% end %>
+
+
 
 

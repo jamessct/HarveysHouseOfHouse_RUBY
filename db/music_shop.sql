@@ -12,6 +12,7 @@ CREATE TABLE artists (
 CREATE TABLE albums (
   id serial4 primary key,
   name varchar(255),
+  album_art varchar(255),
   artist_id int4 references artists(id) on delete cascade,
   UNIQUE (name)
 );
@@ -22,6 +23,6 @@ CREATE TABLE stock (
   format varchar(255),
   stock_level int4,
   threshold int4,
-  buy_price int4,
-  sell_price int4
+  buy_price decimal (10, 2),
+  sell_price decimal (10, 2)
 );
