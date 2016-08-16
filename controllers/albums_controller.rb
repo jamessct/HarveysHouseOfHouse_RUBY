@@ -27,7 +27,7 @@ get('/albums/:id/edit') do
   erb(:'albums/edit')
 end
 
-put('/albums/:id') do
+post('/albums/:id') do
  @album = Album.update(params)
  redirect to("/albums/#{params[:id]}")
 end

@@ -48,7 +48,7 @@ class Album
   def self.update(options)
     sql = "UPDATE albums SET
             name = '#{options['name']}',
-            artist_id = #{options['artist_id']},
+            artist_id = #{options['artist_id']}
             WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end

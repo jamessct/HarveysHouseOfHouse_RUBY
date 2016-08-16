@@ -33,12 +33,12 @@ get('/stock/:id/edit') do
   erb(:'stock/edit')
 end
 
-put('/stock/:id') do
+post('/stock/:id') do
   @stock = Stock.update(params)
-  redirect to('/stock/#{params[:id]}')
+  redirect to("/stock/#{params[:id]}")
 end
 
 post('/stock/:id/delete') do
-  @stock = Stock.delete(params[:id])
+  @stock = Stock.destroy(params[:id])
   redirect to('/stock')
 end
