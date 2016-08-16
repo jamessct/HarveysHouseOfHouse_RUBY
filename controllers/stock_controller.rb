@@ -15,6 +15,8 @@ end
 post('/stock') do
   @stock = Stock.new(params)
   @stock.save
+  @artists = Artist.all.first
+  @albums = Album.all.first
   erb(:'stock/create')
 end
 

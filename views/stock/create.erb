@@ -1,13 +1,24 @@
 <h1>You've added...</h1>
 
-<p>@stock.format</p>
+<p>Artist</p>
+<p><%= @artists.name %></p>
 
-<p>@stock.stock_level</p>
+<p>Album</p>
+<p><%= @albums.name %></p>
 
-<p>@stock.threshold</p>
+<p>Format:</p>
+<p><%= @stock.format %></p>
 
-<p>@stock.buy_price</p>
+<p>Quantity:</p>
+<p><%= @stock.stock_level %></p>
 
-<p>@stock.sell_price</p>
+<p>Threshold:</p>
+<p><%= @stock.threshold %></p>
+
+<p>Buy Price:</p>
+<p>£<%= @stock.buy_price %></p>
+
+<p>Sell Price:</p>
+<p>£<%= @stock.sell_price %></p>
 
 <h1>...to your stock!</h1>
