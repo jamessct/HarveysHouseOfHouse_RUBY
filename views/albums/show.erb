@@ -1,7 +1,6 @@
-<h1>Title:</h1>
-<p><%= @album.name() %></p>
+<p><b>Title - </b><%= @album.name() %></p>
 
-<h1>Artwork</h1>
+<h2>Artwork</h2>
 <img src=" <%= @album.album_art %>" style="width:250px;height:250px;">
 
 <a href="/albums/<%= @album.id %>/edit">Edit</a>

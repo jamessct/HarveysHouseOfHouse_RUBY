@@ -1,3 +1,14 @@
-body {
-  background-color: #E0E3DA
+p {
+  font-family: "Arial";
+  color: #d6f5f5;
 }
+
+h2 {
+  font-family: "Arial";
+  color: #d6f5f5;
+}
+
+body {
+  background-color: #33334d;
+}
+

@@ -37,6 +37,26 @@ class Stock
     return result
   end
 
+  def stock_check()
+    if @stock_level >= @threshold
+      return "A-OK"
+    elsif @stock_level <= @threshold
+      return "Running low"
+    elsif @stock_level == 0
+      return "Out of Stock"
+    end
+  end
+
+  def stock_colour_code()
+    if @stock_level == "A-OK"
+      return "green"
+    elsif @stock_level == "Running low"
+      return "Amber"
+    elsif @stock_level == "Out of Stock"
+      return "Red"
+    end
+  end
+
   def self.all()
     sql = "SELECT * FROM stock;"
     stock = SqlRunner.run(sql)
