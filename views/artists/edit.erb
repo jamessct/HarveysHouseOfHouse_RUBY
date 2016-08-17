@@ -5,9 +5,22 @@
     <input type="text" name="name" value="<%= @artist.name %>"><br>
 
     <select name="genre" >
-      <option value="Noise" <%= 'selected' if @artist.genre == "Noise"%>>Noise</option>
-      <option value="Pop" <%= 'selected' if @artist.genre == "Pop" %>>Pop</option>
-      <option value="Soundtrack" <%= 'selected' if @artist.genre == "Soundtrack" %>>Soundtrack</option>
+      <option value="Acid House" <%= 'selected' if @artist.genre == "Acid House"%>>Acid House</option>
+      <option value="Ambient House" <%= 'selected' if @artist.genre == "Ambient House" %>>Ambient House</option>
+      <option value="Afro House" <%= 'selected' if @artist.genre == "Afro House" %>>Afro House</option>
+      <option value="Bassline House" <%= 'selected' if @artist.genre == "Bassline House"%>>Bassline House</option>
+      <option value="Chicago House" <%= 'selected' if @artist.genre == "Chicago House" %>>Chicago House</option>
+      <option value="Deep House" <%= 'selected' if @artist.genre == "Deep House" %>>Deep House</option>
+      <option value="Electro House" <%= 'selected' if @artist.genre == "Electro House" %>>Electro House</option>
+      <option value="Funky House" <%= 'selected' if @artist.genre == "Funky House" %>>Funky House</option>
+      <option value="Future House" <%= 'selected' if @artist.genre == "Future House">Future House</option>
+      <option value="Garage House" <%= 'selected' if @artist.genre == "Garage House" %>>Garage House</option>
+      <option value="Hard House" <%= 'selected' if @artist.genre == "Hard House" %>>Hard House</option>
+      <option value="Jazz House" <%= 'selected' if @artist.genre == "Jazz House" %>>Jazz House</option>
+      <option value="Minimal House" <%= 'selected' if @artist.genre == "Minimal House" %>>Minimal House</option>
+      <option value="Progressive House" <%= 'selected' if @artist.genre == "Progressive House" %>>Progressive House</option>
+      <option value="Soulful House" <%= 'selected' if @artist.genre == "Soulful House" %>>Soulful House</option>
+      <option value="Tropical House" <%= 'selected' if @artist.genre == "Tropical House" %>>Tropical House</option>
     </select>
     <input type='submit' value="Update Artist">
   </form>

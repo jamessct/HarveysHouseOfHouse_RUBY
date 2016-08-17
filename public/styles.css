@@ -53,6 +53,22 @@ input {
   margin: auto;
 }
 
+.center2 {
+  margin: auto;
+  width: 20%;
+  text-align: center;
+}
+
+.center3 {
+  position: relative;
+  left: 138px;
+}
+
+.center_artwork {
+  margin: auto;
+  width: 20%;
+}
+
 .image {
   background-image: url(http://ajournalofmusicalthings.com/wp-content/uploads/Record-collection.jpg);
   display: block;

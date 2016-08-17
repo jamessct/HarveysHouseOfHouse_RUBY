@@ -10,6 +10,7 @@ class Album
     @id = options['id'].to_i
     @name = options['name']
     @album_art = options['album_art']
+    @year = options['year']
     @artist_id = options['artist_id'].to_i
   end
 

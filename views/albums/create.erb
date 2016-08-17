@@ -1,11 +1,14 @@
-<h2>You've added...</h2>
+<h2>Success!</h2>
 
-<p><%= @albums.name %></p>
+<div class="center2">
+<p><i><%= @albums.name %></i> has been added to your library.</p>
+</div>
 
-
+<div class="center_artwork">
 <a href="/albums/<%= @albums.id %>">
 <img src=" <%= @albums.album_art %>" style="width:250px;height:250px;">
 </a>
+</div>
 
 <a href="/albums">View all albums</a>
 <a href="/stock/select_artist">Add Stock</a><br>

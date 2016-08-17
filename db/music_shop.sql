@@ -12,6 +12,7 @@ CREATE TABLE albums (
   id serial4 primary key,
   name varchar(255),
   album_art varchar(255),
+  year_released int4,
   artist_id int4 references artists(id) on delete cascade
 );
 

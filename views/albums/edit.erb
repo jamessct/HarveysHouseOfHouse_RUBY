@@ -7,7 +7,7 @@
     
     <select name="artist_id">
         <% @artist.each do |artist| %>
-          <option value="<%= artist.id %>" <%= 'selected' if @album.artist.id == artist.id %>><%= artist.name %></option>    
+          <option value="<%= artist.id %>" <%= 'selected' if @album.artist_id == artist.id %>><%= artist.name %></option>    
         <% end %>
     </select>
 
