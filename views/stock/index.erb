@@ -1,26 +1,29 @@
 <h2>Stock List</h2>
 
-<p>
+<center><table width="95%" border="1">
+<th width="100">Artist</th><th>Genre</th><th>Title</th><th>Format</th><th>Qty</th><th>Stock Check</th><th>Price</th><th>Profit</th><th>Edit</th><tr>
 <% @stocks.each do |stock|  %>
 <% stock.albums.each do |album| %>
 <% album.artists.each do |artist| %>
-Artist - <%= artist.name %><br>
-<b>Genre - </b><%= artist.genre %><br>
+<td><%= artist.name %></td>
+<td><%= artist.genre %></td>
 <% end %>
 <% end %>
 
 <% stock.albums.each do |album| %>
-<b>Album name - </b> <%= album.name %><br>
+<td><%= album.name %></td>
 <% end %>
-<b>Format - </b><%= stock.format %><br>
-<b>Quantity - </b><%= stock.stock_level %><br>
-<b>Stock Check - </b><span style="<%= stock.stock_colour_code %>"> <%= stock.stock_check %></span></p><br>
-<p><b>Price -</b> £<%= stock.sell_price %>.00<br>
-<b>Profit -</b> £<%= stock.markup %>.00
+<td><%= stock.format %></td>
+<td><%= stock.stock_level %></td>
+<td><span style="<%= stock.stock_colour_code %>"> <%= stock.stock_check %></span></td>
+<td>£<%= stock.sell_price %>.00</td>
+<td>£<%= stock.markup %>.00</td>
+<td><a href="/stock/<%= stock.id %>">Edit</a></td>
+<tr>
 
-</p>
-<a href="/stock/<%= stock.id %>">View & Amend</a>
-<hr>
+</table>
+
+
 <% end %>
 
 
