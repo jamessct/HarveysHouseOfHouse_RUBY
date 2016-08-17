@@ -1,19 +1,19 @@
-<h1>Album reference number: </h1>
+<h2>Album reference number: </h2>
 <p><%= @stock.album_id %></p>
 
-<h1>Format</h1>
+<h2>Format</h2>
 <p><%= @stock.format %></p>
 
-<h1>Stock Level</h1>
+<h2>Stock Level</h2>
 <p><%= @stock.stock_level %></p>
 
-<h1>Threshold</h1>
+<h2>Threshold</h2>
 <p><%= @stock.threshold %></p>
 
-<h1>Buy Price</h1>
+<h2>Buy Price</h2>
 <p>£<%= @stock.buy_price %></p>
 
-<h1>Sell Price</h1>
+<h2>Sell Price</h2>
 <p>£<%= @stock.buy_price %></p>
 
 <form action="/stock/<%= @stock.id %>/edit" method="get">

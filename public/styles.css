@@ -13,11 +13,24 @@ p {
   color: #d6f5f5;
 }
 
-.box_thing {
-  background-color: #C5C6B6;
+table {
+  font-family: "Arial";
+  color: #d6f5f5;
 }
 
 body {
   background-color: #3E4348;
+}
+
+.image {
+  background-image: url(http://ajournalofmusicalthings.com/wp-content/uploads/Record-collection.jpg);
+  display: block;
+  width: 76%;
+  height: 25%;
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 150px;
+  border-radius: 50%;
 }
 
