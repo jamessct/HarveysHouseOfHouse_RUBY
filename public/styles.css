@@ -49,8 +49,7 @@ input {
 }
 
 .center {
-  position: relative;
-  left: 207px;
+  width: 10.5%;
   margin: auto;
 }
 
