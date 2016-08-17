@@ -2,40 +2,24 @@
 
 <p>
 <% @stocks.each do |stock|  %>
-Artist: <br>
 <% stock.albums.each do |album| %>
 <% album.artists.each do |artist| %>
-<%= artist.name %><br>
-Genre:
-<%= artist.genre %><br>
+Artist - <%= artist.name %><br>
+<b>Genre - </b><%= artist.genre %><br>
 <% end %>
 <% end %>
 
-Album name:
 <% stock.albums.each do |album| %>
-<%= album.name %><br>
+<b>Album name - </b> <%= album.name %><br>
 <% end %>
-
-
-Format:
-<%= stock.format %><br>
-
-Quantity:
-<%= stock.stock_level %><br>
-
-Threshold:</p>
-<p styles="color: <%= stock.stock_colour_code %>"><%= stock.stock_check %><br></p>
-
-Stock Check:
-<%= stock.buy_price %><br>
-
-Sell price:
-<%= stock.sell_price %><br>
+<b>Format - </b><%= stock.format %><br>
+<b>Quantity - </b><%= stock.stock_level %><br>
+<b>Stock Check - </b><span style="<%= stock.stock_colour_code %>"> <%= stock.stock_check %></span></p><br>
+<p><b>Price -</b> £<%= stock.sell_price %>.00<br>
+<b>Profit -</b> £<%= stock.markup %>.00
 
 </p>
-<a href="/stock/<%= stock.id %>">View</a>
-</form>
-</form>
+<a href="/stock/<%= stock.id %>">View & Amend</a>
 <hr>
 <% end %>
 

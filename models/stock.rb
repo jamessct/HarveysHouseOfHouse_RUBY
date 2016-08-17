@@ -39,22 +39,28 @@ class Stock
 
   def stock_check()
     if @stock_level >= @threshold
-      return "A-OK"
-    elsif @stock_level <= @threshold
-      return "Running low"
+      return @stock_level.to_s + " [A-OK]"
+    elsif @stock_level < @threshold
+      return @stock_level.to_s + " [Running low]"
     elsif @stock_level == 0
-      return "Out of Stock"
+      return @stock_level.to_s + " [Out of Stock]"
     end
   end
 
   def stock_colour_code()
-    if @stock_level == "A-OK"
-      return "green"
-    elsif @stock_level == "Running low"
-      return "Amber"
-    elsif @stock_level == "Out of Stock"
-      return "Red"
+    if stock_check == @stock_level.to_s + " [Out of Stock]"
+      return "color: red"
+    elsif stock_check == @stock_level.to_s + " [Running low]"
+      return "color: yellow"
+    else 
+      puts "@stock_check = #{@stock_check}"
+      return "color: green"
     end
+  end
+
+  def markup()
+    result = @buy_price - @sell_price
+    return result
   end
 
   def self.all()

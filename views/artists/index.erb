@@ -2,7 +2,7 @@
 
 
 <% @artists.each do |artist| %>
-  <p>Artist: <%= artist.name %></p>
+  <p><b>Artist</b> - <%= artist.name %></p>
   <!-- <p>ID: <%= artist.id %></p>-->  
   <a href="/artists/<%= artist.id %>">View</a>
 <% end %>

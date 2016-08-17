@@ -1,8 +1,8 @@
-<h1>You have added...</h1>
+<h2>You have added...</h2>
 
 
 <% @albums.each do |album| %>
-  <p>Album: <%= album.name %></p>
+  <p><b>Album</b> - <%= album.name %></p>
   <img src=" <%= album.album_art %>" style="width:250px;height:250px;">
   <a href="/albums/<%= album.id %>">View</a>
 <% end %>
