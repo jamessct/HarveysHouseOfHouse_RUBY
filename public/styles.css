@@ -45,7 +45,13 @@ input {
   font-family: "arial";
   border-radius: 30%;
   position: relative;
-  top: -30px;
+  top: 0px;
+}
+
+.center {
+  position: relative;
+  left: 207px;
+  margin: auto;
 }
 
 .image {
@@ -81,9 +87,17 @@ input {
   margin-top: 30px;
 }
 
+a:link {
+
+}
+
 .iamadiv {
   display: inline-block;
   width: 400px;
   position:relative;
   left: 90px;
+}
+
+a:hover {
+  color: #EFFFE9;
 }

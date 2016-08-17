@@ -2,7 +2,6 @@
 
 <img src=" <%= @album.album_art %>" style="width:250px;height:250px;">
 
-
 <div class="home-nav">
 <a href="/albums/<%= @album.id %>/edit">Edit</a>
 <div/>
@@ -10,3 +9,4 @@
 <form action="/albums/<%= @album.id %>/delete" method="post">
   <input type="submit" value="delete">
 </form>
+

@@ -1,9 +1,12 @@
-<h2>Album library</h2>
+<h2>Library</h2>
 
+<div class="center">
+<p>Please note, not all of these albums are currently in stock.  Click on the individual album to check availability/order stock.</p>
+</div>
 
 <% @albums.each do |album| %>
 <div class="iamadiv">
-  <p><b>Album</b> - <%= album.name %></p>
+  <p><i><%= album.name %></i><br>
   <a href="albums/<%= album.id %>">
   <img src=" <%= album.album_art %>" style="width:250px;height:250px;">
   </a>
