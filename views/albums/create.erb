@@ -2,7 +2,10 @@
 
 <p><%= @albums.name %></p>
 
-<img src=" <%= @albums.album_art %>" style="width:250px;height:250px;">
+
+<a href="/albums/<%= @albums.id %>">
+<img src=" <%= @albums.album_art %>" style="width:250px;height:250px;>
+</a>
 
 <h2>...to your library!</h2>
 

@@ -1,7 +1,6 @@
 <h2>Edit Artist</h2>
 
   <form action="/artists/<%= @artist.id %>" method="post">
-    <!-- <input type="hidden" name="_method" value="post"> -->
     <label for="name">Name:</label>
     <input type="text" name="name" value="<%= @artist.name %>"><br>
 

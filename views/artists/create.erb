@@ -1,13 +1,17 @@
-<h1>You have added...</h1>
+<b><h2>New Artist</h2></b>
 
-<h3>Artist:</h3>
-<p><%= @artists.name %></p>
+<b><p style="text-align:center">Artist - </b><%= @artists.name %><br>
 
-<h3>Genre:</h3>
-<p><%= @artists.genre %></p>
+<b>Genre - </b><%= @artists.genre %></p>
 
-<h1>...to your library!</h1>
+<div class="home-nav">
+<a href="/artists">All artists</a>
+</div>
 
-<a href="/artists">View all artists</a>
-<a href="/albums/new">Add album to artist</a><br>
-<a href="/options">Return</a>
+<div class="home-nav">
+<a href="/albums/new">Add album</a><br>
+</div>
+
+<div class="home-nav">
+<a href="/options">Back</a>
+</div>

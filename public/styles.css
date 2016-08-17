@@ -6,11 +6,21 @@ h1 {
 h2 {
   font-family: "Arial";
   color: #d6f5f5;
+  text-align: center;
+  font-size: 40px;
 }
 
 p {
   font-family: "Arial";
   color: #d6f5f5;
+}
+
+form {
+  color: #d6f5f5;
+  position: relative;
+  width: 600px;
+  margin: auto;
+  font-family: "Arial";
 }
 
 table {
@@ -27,6 +37,15 @@ a {
   text-decoration: none;
   font-family: "arial black";
   font-size: 25px;
+  color: #3E4348;
+}
+
+input {
+  background-color: #E3E36A;
+  font-family: "arial";
+  border-radius: 30%;
+  position: relative;
+  top: -30px;
 }
 
 .image {
@@ -49,8 +68,7 @@ a {
   background-color: #E3E36A;
   text-decoration: none;
   position: relative;
-  right: 200px;
-  left: 500px;
+  left: 525px;
   width: 200px;
   padding: 6px 12px;
   border-top: 40px;
@@ -60,6 +78,12 @@ a {
   transition: all 2.5s;
   text-align: center;
   border-radius: 30%;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
+.iamadiv {
+  display: inline-block;
+  width: 400px;
+  position:relative;
+  left: 90px;
+}

@@ -1,9 +1,14 @@
-<h2>You have added...</h2>
+<h2>Album library</h2>
 
 
 <% @albums.each do |album| %>
+<div class="iamadiv">
   <p><b>Album</b> - <%= album.name %></p>
+  <a href="albums/<%= album.id %>">
   <img src=" <%= album.album_art %>" style="width:250px;height:250px;">
+  </a>
   <a href="/albums/<%= album.id %>">View</a>
+  </div>
 <% end %>
+
 
