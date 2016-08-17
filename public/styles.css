@@ -79,6 +79,17 @@ input {
   width: 40%;
 }
 
+.center7 {
+  margin: auto;
+  width: 20%;
+}
+
+ .center8 {
+   margin: auto;
+   width: 2%;
+   margin-top: 20px;
+ }
+
 .center_artwork {
   margin: auto;
   width: 20%;

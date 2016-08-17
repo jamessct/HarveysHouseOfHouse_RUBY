@@ -1,5 +1,6 @@
 <h2>You've added...</h2>
 
+<div class="center7">
 <p><b>Artist - </b><%= @artists.name %></p>
 <p><b>Album - </b><%= @albums.name %></p>
 <p><b>Format - </b><%= @stock.format %></p>
@@ -7,8 +8,10 @@
 <p><b>Threshold - </b><%= @stock.threshold %></p>
 <p><b>Buy Price - </b>£<%= @stock.buy_price %>.00</p>
 <p><b>Sell Price - </b>£<%= @stock.sell_price %>.00</p>
+</div>
 
 <h2>...to your stock!</h2>
 
-<a href="/stock">View all stock</a>
-<a href="/options">Return</a>
+<div class="home-nav">
+<a href="/stock">Inventory</a>
+</div>
