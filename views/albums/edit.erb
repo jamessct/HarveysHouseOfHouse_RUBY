@@ -1,8 +1,9 @@
   <h2>Edit Album</h2>
 
+  <div class="center5">
   <form action="/albums/<%= @album.id %>" method="post">
     <input type="hidden" name="_method" value="post">
-    <label for="name">Name:</label>
+    <label for="name"><b>Name - </b></label>
     <input type="text" name="name" value="<%= @album.name %>"><br>
     
     <select name="artist_id">
@@ -11,5 +12,12 @@
         <% end %>
     </select>
 
+  <label for="album_art"><b>Artwork - </b></label>
+  <input type="text" name="album_art">
+
+  <label for="year_released"><b>Released - </b></label>
+  <input type="numbers" name="year_released" value="<%= @album.year_released %>">
+
     <input type='submit' value="Update Album">
   </form>
+  </div>

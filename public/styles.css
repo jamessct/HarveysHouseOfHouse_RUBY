@@ -61,7 +61,12 @@ input {
 
 .center3 {
   position: relative;
-  left: 138px;
+  left: 130px;
+}
+
+.center4 {
+  margin: auto;
+  width: 20%;
 }
 
 .center_artwork {
