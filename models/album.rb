@@ -4,13 +4,13 @@ require_relative('stock')
 
 class Album
 
-  attr_reader(:id, :name, :album_art, :artist_id)
+  attr_reader(:id, :name, :album_art, :year_released, :artist_id)
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
     @album_art = options['album_art']
-    @year = options['year']
+    # @year_released = options['year_released'].to_i
     @artist_id = options['artist_id'].to_i
   end
 
@@ -50,8 +50,9 @@ class Album
   def self.update(options)
     sql = "UPDATE albums SET
             name = '#{options['name']}',
-            album_art = #{options['album_art']}
-            artist_id = #{options['artist_id']}
+            album_art = #{options['album_art']},
+            year_released =  #{options['year_released']},
+            artist_id = #{options['artist_id']},
             WHERE id = #{options['id']};"
     SqlRunner.run(sql)
   end

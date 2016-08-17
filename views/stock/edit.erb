@@ -1,5 +1,6 @@
   <h2>Edit Stock</h2>
 
+  <div class="center7">
   <form action="/stock/<%= @stock.id %>" method="post">
     <select name=album_id>
       <% @albums.each do |album| %>
@@ -23,4 +24,5 @@
     
     <input type='submit' value="Update Stock">
   </form>
+  </div>
 
