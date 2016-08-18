@@ -11,7 +11,7 @@ class TestStock < Minitest::Test
       "threshold" => "5", 
       "buy_price" => "6", 
       "sell_price" => "9"
-      })
+    })
   end
 
   def test_format()

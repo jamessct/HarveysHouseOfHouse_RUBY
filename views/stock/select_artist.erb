@@ -1,13 +1,13 @@
 <div class="center">
-<form action='/artists/:id/stock/new' method=get>
-<label for="artist">Artist</label>
-<select name="artist_id">
-  <% @artist.each do |artist| %>
-    <option value="<%= artist.id %>"><%= artist.name %></option>
+  <form action='/artists/:id/stock/new' method=get>
+  <label for="artist">Artist</label>
+  <select name="artist_id">
+    <% @artist.each do |artist| %>
+      <option value="<%= artist.id %>"><%= artist.name %></option>
   <% end %>
 
 
-</select>
-<input type="submit" value="Continue">
-</form>
+  </select>
+  <input type="submit" value="Continue">
+  </form>
 </div>

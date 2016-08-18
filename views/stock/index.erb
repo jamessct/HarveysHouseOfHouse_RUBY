@@ -2,6 +2,7 @@
 
 <center><table width="95%" border="1">
 <th width="80">Album Art</th><th width="100">Artist</th><th>Genre</th><th>Title</th><th>Format</th><th>Qty</th><th>Stock Check</th><th>Price</th><th>Profit</th><th>Edit</th><tr>
+
 <% @stocks.each do |stock|  %>
 <% stock.albums.each do |album| %>
 <td><img src=" <%= album.album_art %>" style="width:75px;height:75px;"></td>
@@ -10,7 +11,6 @@
 <td><%= artist.genre %></td>
 <% end %>
 <% end %>
-
 <% stock.albums.each do |album| %>
 <td><%= album.name %></td>
 <% end %>

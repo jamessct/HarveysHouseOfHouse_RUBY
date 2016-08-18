@@ -1,16 +1,13 @@
-  <h2>Edit Album</h2>
+<h2>Edit Album</h2>
 
-  <div class="center5">
+<div class="center5">
 
-    <form action="/albums/<%= @album.id %>" method="post">
-      <input type="hidden" name="_method" value="post">
-      <label for="name"><b>Name - </b></label>
-      <input type="text" name="name" value="<%= @album.name %>">
-      
-
+  <form action="/albums/<%= @album.id %>" method="post">
+    <input type="hidden" name="_method" value="post">
+  <label for="name"><b>Name - </b></label>
+    <input type="text" name="name" value="<%= @album.name %>">
   <label for="album_art"><b>Artwork - </b></label>
-  <input type="text" name="album_art">
-
+    <input type="text" name="album_art">
     <input type='submit' value="Update Album">
   </form>
-  </div>
+</div>
