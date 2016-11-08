@@ -1,0 +1,5 @@
+In the first project for the CodeClan course, I was tasked to create an application to help a record store owner (Harvey) keep track of their inventory.  To achieve this, I utilised Ruby with the Sinatra framework for the front end, while using PostgreSQL for the database.  
+
+The app allowed for the user to input, edit, and delete artists, albums and stock, and the database schema was organised as a one to many relationship between artists and albums, and another one to many relationship between albums and stock.
+
+The user would be warned if stock levels are running low with a colour coordinated stock level indicator.  Further, the capability to add album artwork was incorporated as an additional feature, in order to make the design more interesting.

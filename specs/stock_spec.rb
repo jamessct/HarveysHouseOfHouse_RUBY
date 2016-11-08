@@ -34,11 +34,15 @@ class TestStock < Minitest::Test
     assert_equal(9, @stock.sell_price)
   end
 
+  def test_stock_check()
+    assert_equal("4 [Running low]", @stock.stock_check)
+  end
+
   def test_colour_code()
     assert_equal("color: yellow", @stock.stock_colour_code)
   end
 
-  def test_stock_check()
-    assert_equal("4 [Running low]", @stock.stock_check)
+  def test_profit()
+    assert_equal(3, @stock.profit)
   end
 end

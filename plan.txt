@@ -1,3 +1,5 @@
 to get the menus as streamlined as possible, work from the homepage to add stock..... this will link to add artist, add album, add stock.... blabla
 
 To achieve tomorrow (Tuesday) - make sure MVP is joined up and complete, add album art, css I guess (with rave button)
+
+password for store: Cohort120151005
